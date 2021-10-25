@@ -43,30 +43,26 @@ $(document).ready(function(){
         datos.append('registro', 'borrar');
         datos.append('id', id);
         //console.log(datos);
-
-        if(tipo=='admin'){
-            borrarAjax(registro, enlace, datos);
-        }
         if(tipo=='evento'){
             borrarAjax(registro, enlace, datos);
         }
-        if(tipo=='invitado'){            
-            Swal.fire({
-            title: 'Esta seguro?',
-            text: "Hay eventos con este invitado!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, borrarlo!'
-            }).then((result) => {
-            if (result.isConfirmed) {
-                datos.append('imagen', $(this).parent().parent().children()[2].innerHTML);
+        // if(tipo=='invitado'){            
+        //     Swal.fire({
+        //     title: 'Esta seguro?',
+        //     text: "Hay eventos con este invitado!",
+        //     icon: 'warning',
+        //     showCancelButton: true,
+        //     confirmButtonColor: '#3085d6',
+        //     cancelButtonColor: '#d33',
+        //     confirmButtonText: 'Si, borrarlo!'
+        //     }).then((result) => {
+        //     if (result.isConfirmed) {
+        //         datos.append('imagen', $(this).parent().parent().children()[2].innerHTML);
 
-                borrarAjax(registro, enlace, datos);
-            }
-            })
-        }         
+        //         borrarAjax(registro, enlace, datos);
+        //     }
+        //     })
+        // }         
     });
     ////////
     $('#login-admin').on('submit', function(e){

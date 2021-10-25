@@ -36,12 +36,12 @@
                 <thead>
                 <tr>
                   <th>ID</th>
-                  <th>Invitado</th>
-                  <th>No Invitados</th>
+                  <th>Nombre</th>
+                  <th># Inv</th>
                   <th>Codigo</th>
                   <th>Visto</th>
-                  <th>Asist Auto</th>
-                  <th>Asist Manual</th>
+                  <th>Ast Auto</th>
+                  <th>Ast Man</th>
                   <th>Telefono</th>
                   <th>Acciones</th>
                 </tr>

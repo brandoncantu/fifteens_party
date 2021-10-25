@@ -59,6 +59,52 @@ if(isset($_POST['codigo_inv'])){
         }
         die(json_encode($respuesta));
     }
+
+    else if($accion == 'confirm'){
+        try{
+
+            if(isset($_POST['confirmation'])){
+                $confirm = (int) $_POST['confirmation'];
+            }else{
+                $respuesta = array(
+                    'respuesta' => 'error',
+                    'error' => 'Confirmacion no recibida'
+                );
+                die(json_encode($respuesta));
+            }
+            include_once('config.php');
+            $sql = "UPDATE invitados SET asistencia = ? where codigo_inv = ?";
+            $stmt = $link->prepare($sql);
+            $stmt->bind_param('is', $confirm, $codigo_inv);
+            $stmt->execute();
+            if($stmt->affected_rows){
+                if($confirm == 1 || $confirm == '1'){
+                    $respuesta = array(
+                        'respuesta' => 'exito',
+                        'message' => 'Gracias por confirmar! Te esperamos el 18 de octubre!'
+                    );
+                }else if($confirm == 2 || $confirm == '2'){
+                    $respuesta = array(
+                        'respuesta' => 'exito',
+                        'message' => 'Gracias por notificarnos'
+                    );
+                }
+            }else{
+                $respuesta = array(
+                    'respuesta' => 'error',
+                    'message' => 'Error al recibir tu respuesta'
+                );
+            }
+            $stmt->close();
+            $link->close();
+        }catch(Exception $e){
+            $respuesta = array(
+                'respuesta' => 'error',
+                'error' => $e-getMessage()
+             );
+        }
+        die(json_encode($respuesta));
+    }
     
 }else{
     $respuesta = array(

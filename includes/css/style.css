@@ -11,8 +11,8 @@ body {
   color: #515151;
   /*background: #FFF9F2;*/
   background-image: url("../img/intern_1.jpg");
-  background-repeat: repeat;
-  background-size: 100%;
+  background-size: auto;
+  background-repeat: no-repeat;
   /* overflow: hidden; */
 }
 .gradient-rose{
@@ -295,7 +295,7 @@ div#content-here {
   }
   .page{
     width: 100%;
-    min-height: 100% ;
+    min-height: auto ;
     height: auto;
     margin: 0;
   }
@@ -334,8 +334,8 @@ main p{
   color: #fff;
   font-family: 'MonteCarlo', cursive;
   font-weight: 400;
-  font-family: 'WindSong', cursive;
-  font-weight: 500;
+  /* font-family: 'WindSong', cursive;
+  font-weight: 500; */
   text-align: center;
   margin: 0;
   width: inherit;
@@ -476,7 +476,7 @@ main p{
 .confirm {
   display: flex;
   justify-content: center;
-  margin: 1rem 0;
+  margin: .3rem 0;
 }
 .btn-confirm {
   border: 1px solid rgba(5, 78, 78, 0.5);
@@ -488,5 +488,106 @@ main p{
   font-family: 'Satisfy', cursive;
   font-size: 1rem;
   color: rgba(5, 78, 78, 0.8);
+  transition: all .3s ease;
 }
-/*BIG SCREENS********************************************************/
+.btn-confirm:hover{
+  cursor: pointer;
+  background: rgba(5, 78, 78, 0.5);
+  color: white;
+}
+.confirm-msg{
+  border: none;
+  display: inline;
+  border-radius: 15px;
+  padding: .3rem .6rem;
+  background: transparent;
+  margin: 0;
+  font-family: 'Satisfy', cursive;
+  font-size: 1rem;
+  color: rgba(5, 78, 78, 0.8);
+  transition: all .3s ease;
+}
+/*NUEV DISEÑO********************************************************/
+.page-cont .img-inv{
+  width: 100%;
+  position: relative;
+}
+.page-cont img{
+  width: 100%;
+}
+.personalizacion2{
+  position: absolute;
+  width: 12rem;
+  bottom: 2px;
+  left: 20px;
+}
+.personalizacion2 h1{
+  text-shadow: 0px 0px 4px rgba(0,0,0,0.73);
+  font-size: 2.15rem;
+  margin-bottom: -5px;
+  color: white;
+  font-weight: 500;
+  font-family: 'Satisfy', cursive;
+}
+.personalizacion2 h2{
+  text-shadow: 0px 0px 4px rgba(0,0,0,0.73);
+  font-size: 1.85rem;
+  color: white;
+  font-weight: 400;
+  font-family: 'Satisfy', cursive;
+}
+.personalizacion2 h2 span{
+  font-size: 1.5rem;
+}
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+}
+#row2{
+  height: auto;
+  min-height: auto;
+}
+.row{
+  height: auto;
+}
+.c-left {
+  border-right: 7px solid transparent;
+}
+#row1 > .c-left, #row1 > .c-right, #row3 > .c-left, #row3 > .c-right {
+  background-image: none;
+}
+#row1 > .c-left, #row1 > .c-right, #row1 > .c-middle {
+  border-bottom: 7px solid transparent;
+}
+.c-right {
+  border-left: 7px solid transparent;
+}
+#row3 > .c-left, #row3 > .c-right, #row3 > .c-middle {
+  border-top: 7px solid transparent;
+}
+@media only screen and (max-width: 700px){
+  .personalizacion2{
+    position: absolute;
+    width: 12rem;
+    bottom: 1px;
+    left: 5px;
+  }
+  .personalizacion2 h1{
+    font-size: .8rem;
+    margin-bottom: -5px;
+    color: white;
+    font-weight: 500;
+    font-family: 'Satisfy', cursive;
+  }
+  .personalizacion2 h2{
+    font-size: .7rem;
+    color: white;
+    font-weight: 400;
+    font-family: 'Satisfy', cursive;
+  }
+  .personalizacion2 h2 span{
+    font-size: .4rem;
+  }
+}

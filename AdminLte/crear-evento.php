@@ -39,19 +39,19 @@
               <div class="box-body">
                 <!-- nombre-->  
                 <div class="form-group">
-                  <label for="nombre">Nombre:</label>
+                  <label for="nombre">Nombre*:</label>
                   <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese nombre de invitacion" required>
                 </div>
 
                 <!-- invitados-->
                 <div class="form-group">
-                  <label for="invitados">Invitados:</label>
+                  <label for="invitados">Invitados*:</label>
                   <input type="number" class="form-control" id="invitados" name="invitados" placeholder="Ingrese numero de invitados" required>             
                 </div>
 
                 <!-- codigo-->  
                 <div class="form-group">
-                  <label for="codigo">Codigo:</label>
+                  <label for="codigo">Codigo*:</label>
                   <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Ingrese codigo" required>
                 </div>
 
